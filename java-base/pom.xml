@@ -11,4 +11,12 @@
 
     <artifactId>java-base</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>2.1_3</version>
+        </dependency>
+    </dependencies>
+
 </project>
