@@ -11,4 +11,15 @@
 
     <artifactId>java-container</artifactId>
 
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/com.googlecode.matrix-toolkits-java/mtj -->
+        <dependency>
+            <groupId>com.googlecode.matrix-toolkits-java</groupId>
+            <artifactId>mtj</artifactId>
+            <version>1.0.4</version>
+        </dependency>
+
+
+    </dependencies>
+
 </project>
