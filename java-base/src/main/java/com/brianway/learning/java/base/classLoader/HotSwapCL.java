@@ -1,6 +1,7 @@
 package com.brianway.learning.java.base.classLoader;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashSet;
@@ -30,9 +31,14 @@ public class HotSwapCL extends ClassLoader {
     private Class loadDirectly(String name){
         Class clz = null;
         StringBuilder sb = new StringBuilder(basedir);
-        String className = name.replace('.', File.separatorChar) + ".class";
+        String className = name.replace(".", File.separator) + ".class";
         sb.append(File.separator + className);
         File classFile = new File(sb.toString());
+        try {
+            clz = instanceClass(name,new FileInputStream(classFile),classFile.length());
+        }catch (IOException e){
+            e.printStackTrace();
+        }
 
         return clz;
     }
