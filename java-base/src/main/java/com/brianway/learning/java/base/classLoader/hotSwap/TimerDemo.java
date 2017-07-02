@@ -1,4 +1,4 @@
-package com.brianway.learning.java.base.classLoader;
+package com.brianway.learning.java.base.classLoader.hotSwap;
 
 import java.lang.reflect.Method;
 import java.util.TimerTask;
