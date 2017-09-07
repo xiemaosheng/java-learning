@@ -10,11 +10,18 @@ public class ThreadTest02 implements Runnable {
     public void run() {
         lock.lock();
         System.out.println("run:" + Thread.currentThread().getId());
-        test();
+        testA();
         lock.unlock();
     }
 
-    public void test() {
+    public void testA() {
+        lock.lock();
+        System.out.println("test:" + Thread.currentThread().getId());
+        testB();
+        lock.unlock();
+    }
+
+    public void testB() {
         lock.lock();
         System.out.println("test:" + Thread.currentThread().getId());
         lock.unlock();
